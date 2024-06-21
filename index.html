@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Les Intarissables - 4L Trophy</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <link href="css/styles.css?v=1.6" rel="stylesheet">
+    <link href="css/queries.css?v=1.6" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-left {
+            left: 0;
+        }
+        .timeline-right {
+            left: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-left::after {
+            left: -16px;
+        }
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .timeline-right .timeline-content {
+            margin-left: 45px;
+        }
+        .timeline-left .timeline-content {
+            margin-right: 45px;
+        }
+        .get-started-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9F55;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .try-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9F55;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .timeline-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .timeline-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .features-leftcol, .features-rightcol {
+            padding: 30px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .features-leftcol img, .features-rightcol img {
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .avatar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .avatar img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .footer-credit {
+            font-size: 14px;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+        #expenses-chart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <section class="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                    <nav class="pull">
+                        <ul class="top-nav">
+                            <li><a href="#introduction">Introduction <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#historique">Historique <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#objectifs">Objectifs <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#sponsoring">Sponsoring <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#fiscalite">Fiscalité <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#copilotes">Co-pilotes <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li class="nav-last"><a href="#contact">Contact <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <a href="#"><i class="fa fa-navicon fa-2x nav_slide_button"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h1 class="animated bounceInDown">Les Intarissables</h1>
+                    <p class="animated fadeInUpDelay">Bienvenue sur le site de notre association participant au 4L Trophy, une aventure humanitaire unique qui combine aventure et solidarité.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="#getstarted" class="get-started-btn">Commencer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download-now" id="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 wp1">
+                    <h1 class="section-title">Introduction au 4L Trophy</h1>
+                    <p><strong>Le 4L Trophy</strong> est un rallye humanitaire unique qui combine aventure et solidarité. Chaque année, des jeunes de toute l'Europe se lancent dans un périple à travers la France, l'Espagne et les paysages époustouflants du Maroc à bord de Renault 4L. Cette épreuve teste leur endurance et leur ingéniosité tout en contribuant à des causes humanitaires.</p>
+                    <p><strong>L'objectif principal</strong> du 4L Trophy est double : offrir une expérience inoubliable aux jeunes aventuriers tout en apportant une aide concrète aux enfants les plus démunis du Maroc. Les équipages livrent des fournitures scolaires et sportives directement aux écoles isolées du désert marocain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="historique">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Historique et Impact</h1>
+                    <div class="timeline">
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>1997</h2>
+                                <p><strong>Création</strong> du 4L Trophy par Jean-Jacques Rey en s’inspirant du Dakar.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <h2>2001</h2>
+                                <p><strong>Démocratisation</strong> du 4L Trophy grâce à l’École supérieure de commerce de Rennes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>2008</h2>
+                                <p><strong>1000 véhicules</strong> partent de Biarritz pour la première fois.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <h2>2010</h2>
+                                <p>L’association des enfants du désert s’occupe des dons une fois dans le désert.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>2025</h2>
+                                <p><strong>Un des plus gros rallyes du monde</strong> se réitère pour une 28ème fois.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="objectifs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 features-leftcol wp2">
+                    <h1>Objectifs de Participation</h1>
+                    <p class="margin-bottom">Nos objectifs en participant au 4L Trophy sont de vivre une expérience unique, d'aider les enfants du désert marocain en leur fournissant des fournitures scolaires et sportives, et de sensibiliser à l'importance de l'éducation et de la solidarité internationale.</p>
+                </div>
+                <div class="col-md-6 features-rightcol wp3">
+                    <h1>Impact social et environnemental</h1>
+                    <p class="margin-bottom">Au-delà de l'aventure, le 4L Trophy a un impact profond sur les communautés visitées. À ce jour, des tonnes de fournitures ont été distribuées, améliorant l'accès à l'éducation pour des milliers d'enfants. Les participants s'engagent également à respecter l'environnement en suivant des pratiques de conduite durable.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="#sponsoring" class="try-btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="design" id="sponsoring">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Besoins en Sponsoring</h1>
+                    <p>Pour réaliser cette aventure, nous avons besoin de soutien financier pour couvrir les frais suivants :</p>
+                    <ul>
+                        <li><strong>Voiture</strong> : 4000 €</li>
+                        <li><strong>Inscription</strong> : 3640 €</li>
+                        <li><strong>Préparation</strong> : 1000 €</li>
+                        <li><strong>Essence</strong> : 700 €</li>
+                        <li><strong>Péages</strong> : 150 €</li>
+                        <li><strong>Réparation / Pièces</strong> : 500 €</li>
+                        <li><strong>Assurance</strong> : 440 €</li>
+                        <li><strong>Communications</strong> : 500 €</li>
+                        <li><strong>Nourritures</strong> : 250 €</li>
+                        <li><strong>Divers équipement</strong> : 400 €</li>
+                    </ul>
+                    <p>Un total de 11 580 € est nécessaire pour mener à bien notre projet.</p>
+                    <div id="expenses-chart"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="design" id="fiscalite">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Les Avantages Fiscaux des Dons</h1>
+                    <h2>Pour les Entreprises</h2>
+                    <p><strong>Les entreprises</strong> qui effectuent des dons à des associations reconnues d'intérêt général peuvent bénéficier d'une <strong>réduction d'impôt de 60%</strong> du montant du don, dans la limite de 0,5% du chiffre d'affaires HT.</p>
+                    <h2>Pour les Particuliers</h2>
+                    <p><strong>Les particuliers</strong> peuvent bénéficier d'une <strong>réduction d'impôt de 66%</strong> du montant des dons, dans la limite de 20% du revenu imposable.</p>
+                    <h2>Transparence et Traçabilité</h2>
+                    <p>Pour chaque don reçu, nous fournissons un <strong>reçu fiscal</strong> permettant aux donateurs de bénéficier des avantages fiscaux. Notre association s'engage à une <strong>gestion transparente des fonds reçus</strong>, assurant ainsi une utilisation optimale des dons pour les projets humanitaires du 4L Trophy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="copilotes">
+        <div class="container">
+            <h1 class="section-title">Les Intarissables</h1>
+            <div class="row">
+                <div class="col-md-6 features-leftcol wp2">
+                    <div class="avatar">
+                        <img src="img/av-alexis.png" alt="Alexis Treilles">
+                    </div>
+                    <p><strong>Alexis Treilles</strong></p>
+                    <p>22 ans, Ecole d’ingénieur électronique.</p>
+                </div>
+                <div class="col-md-6 features-rightcol wp3">
+                    <div class="avatar">
+                        <img src="img/av-robin.png" alt="Robin Cambon">
+                    </div>
+                    <p><strong>Robin Cambon</strong></p>
+                    <p>22 ans, Webmarketer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="design" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Contact et Informations Complémentaires</h1>
+                    <p>Pour nous contacter :</p>
+                    <ul>
+                        <li>Email : <a href="mailto:lesintarissables@gmail.com">lesintarissables@gmail.com</a></li>
+                        <li>Téléphone : 07 87 22 12 34</li>
+                        <li>Site Web : <a href="https://4ltrophy.alexis-treilles.fr/">https://4ltrophy.alexis-treilles.fr/</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="footer-credit">Design by Les Intarissables</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js?v=1.7"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/jquery.smooth-scroll.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var options = {
+                chart: {
+                    type: 'pie',
+                    height: 400
+                },
+                series: [4000, 3640, 1000, 700, 150, 500, 440, 500, 250, 400],
+                labels: ['Voiture', 'Inscription', 'Préparation', 'Essence', 'Péages', 'Réparation / Pièces', 'Assurance', 'Communications', 'Nourritures', 'Divers équipement'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }]
+            };
+            var chart = new ApexCharts(document.querySelector("#expenses-chart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>
