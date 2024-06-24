@@ -74,17 +74,7 @@
         .timeline-left .timeline-content {
             margin-right: 45px;
         }
-        .get-started-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #FF9F55;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        .try-btn {
+        .get-started-btn, .try-btn {
             display: inline-block;
             padding: 10px 20px;
             background-color: #FF9F55;
@@ -143,6 +133,12 @@
             font-size: 36px;
             color: #333;
         }
+        .sponsor-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -158,6 +154,10 @@
                             <li><a href="#sponsoring">Sponsoring <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                             <li><a href="#fiscalite">Fiscalité <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                             <li><a href="#copilotes">Co-pilotes <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#formation">Formation Marie Louise <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#tarifs">Tarifs des Sponsors <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#partenaires">Partenaires <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#sponsors">Sponsors <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                             <li class="nav-last"><a href="#contact">Contact <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                         </ul>
                     </nav>
@@ -316,12 +316,78 @@
             </div>
         </div>
     </section>
+    <section class="features" id="formation">
+        <div class="container">
+            <h1 class="section-title">Formation Marie Louise</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/logo-marie-louise.png" alt="Logo Marie Louise" class="sponsor-image">
+                    <p>Texte à propos de la Formation Marie Louise. Ce texte sera remplacé par des informations spécifiques fournies plus tard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="tarifs">
+        <div class="container">
+            <h1 class="section-title">Tarifs des Sponsors</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/voiture-sponsors.png" alt="Voiture avec emplacements sponsors" class="sponsor-image">
+                    <p>Voici les tarifs pour les différents emplacements sur la voiture :</p>
+                    <ul>
+                        <li>Emplacement 1 : 1000 €</li>
+                        <li>Emplacement 2 : 800 €</li>
+                        <li>Emplacement 3 : 600 €</li>
+                        <li>Emplacement 4 : 400 €</li>
+                        <li>Emplacement 5 : 200 €</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="partenaires">
+        <div class="container">
+            <h1 class="section-title">Partenaires du 4L Trophy</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/partenaires-4ltrophy.png" alt="Partenaires du 4L Trophy" class="sponsor-image">
+                    <p>Liste des partenaires du 4L Trophy. Ce texte sera remplacé par des informations spécifiques fournies plus tard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="sponsors">
+        <div class="container">
+            <h1 class="section-title">Nos Sponsors</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/nos-sponsors.png" alt="Nos Sponsors" class="sponsor-image">
+                    <p>Liste de nos sponsors actuels. Ce texte sera remplacé par des informations spécifiques fournies plus tard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="design" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h1>Contact et Informations Complémentaires</h1>
                     <p>Pour nous contacter :</p>
+                    <form action="https://formspree.io/f/{votre-email}" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
                     <ul>
                         <li>Email : <a href="mailto:lesintarissables@gmail.com">lesintarissables@gmail.com</a></li>
                         <li>Téléphone : 07 87 22 12 34</li>
@@ -353,7 +419,7 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var options = {
+            var options = { 
                 chart: {
                     type: 'pie',
                     height: 400
@@ -378,3 +444,4 @@
     </script>
 </body>
 </html>
+
