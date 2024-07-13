@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="fr">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Starnight - A Sexy As Hell Free HTML5/CSS3 Template</title>
+    <title>Les Intarissables - 4L Trophy</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -14,208 +14,664 @@
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
-    <body>
-      <section class="navigation">
+     <!-- Favicon -->
+     <link rel="icon" href="img/logo.webp" type="image/x-icon">
+     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-left {
+            left: 0;
+        }
+        .timeline-right {
+            left: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-left::after {
+            left: -16px;
+        }
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .timeline-right .timeline-content {
+            margin-left: 45px;
+        }
+        .timeline-left .timeline-content {
+            margin-right: 45px;
+        }
+        .get-started-btn, .try-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9F55;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .timeline-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .timeline-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .features-leftcol, .features-rightcol {
+            padding: 30px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .features-leftcol img, .features-rightcol img {
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .avatar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .avatar img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .footer-credit {
+            font-size: 14px;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+        #expenses-chart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #333;
+        }
+        .sponsor-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="navigation">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-              <nav class="pull">
-                <ul class="top-nav">
-                  <li><a href="#getstarted">Get Started <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                  <li><a href="#media">Media <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                  <li><a href="#features">Features <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                  <li class="nav-last"><a href="#design">Design <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                </ul>
-              </nav>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                    <nav class="pull">
+                        <ul class="top-nav">
+                            <li><a href="#introduction">Introduction <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#historique">Historique <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#objectifs">Objectifs <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#sponsoring">Sponsoring <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#fiscalite">Fiscalité <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#copilotes">Co-pilotes <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#formation">Formation Marie Louise <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#tarifs">Tarifs des Sponsors <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#partenaires">Partenaires <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li><a href="#sponsors">Sponsors <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            <li class="nav-last"><a href="#contact">Contact <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-      <section class="hero" id="hero">
+    </section>
+    <section class="hero" id="hero">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-right">
-              <a href="#"><i class="fa fa-navicon fa-2x nav_slide_button"></i></a>
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <a href="#"><i class="fa fa-navicon fa-2x nav_slide_button"></i></a>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-              <h1 class="animated bounceInDown">Starnight App</h1>
-              <p class="animated fadeInUpDelay">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h1 class="animated bounceInDown">Les Intarissables</h1>
+                    <p class="animated fadeInUpDelay">Bienvenue sur le site de notre association participant au 4L Trophy, une aventure humanitaire unique qui combine aventure et solidarité.</p>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2 col-md-offset-5 text-center">
-              <a href="http://player.vimeo.com/video/87701971?title=0&amp;byline=0&amp;portrait=0&amp;color=1883ad&amp;autoplay=1" class="hero-play-btn various fancybox.iframe">Play Button</a>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="#getstarted" class="get-started-btn">Commencer</a>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-              <a href="" class="get-started-btn">Get Started</a>
-            </div>
-          </div>
         </div>
-      </section>
-      <section class="download-now" id="getstarted">
+    </section>
+    <section class="download-now" id="introduction">
         <div class="container">
-          <div class="row">
-            <div class="col-md-8 wp1">
-              <h1>
-              See the sky even better than your own eyes can
-              </h1>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Auae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-              <a href="#" class="download-btn">Download Now</a>
+            <div class="row">
+                <div class="col-md-8 wp1">
+                    <h1 class="section-title">Introduction au 4L Trophy</h1>
+                    <p><strong>Le 4L Trophy</strong> est un rallye humanitaire unique, créé en 1997 par Jean-Jacques Rey, s'inspirant du célèbre Dakar. Chaque année, des jeunes de toute l'Europe se lancent dans un périple à travers la France, l'Espagne et les paysages époustouflants du Maroc à bord de la légendaire Renault 4L. Cette épreuve teste leur endurance, leur ingéniosité et leur esprit d'équipe tout en contribuant à des causes humanitaires.</p>
+                    <p><strong>Objectif principal :</strong> Offrir une expérience inoubliable aux jeunes aventuriers tout en apportant une aide concrète aux enfants les plus démunis du Maroc. Les équipages livrent des fournitures scolaires et sportives directement aux écoles isolées du désert marocain.</p>
+                    <p><strong>Quelques chiffres clés :</strong></p>
+                    <ul>
+                        <li>Plus de 1 200 équipages participent chaque année, représentant plus de 2 400 participants.</li>
+                        <li>Plus de 60 tonnes de fournitures scolaires et sportives collectées et distribuées.</li>
+                        <li>Une distance totale parcourue de plus de 6 000 kilomètres.</li>
+                    </ul>
+                    <p><strong>Impact humanitaire :</strong> Grâce au partenariat avec l'association Les Enfants du Désert, le 4L Trophy a permis d'améliorer l'accès à l'éducation pour des milliers d'enfants au Maroc. Depuis 2001, l'École supérieure de commerce de Rennes a contribué à démocratiser cet événement, permettant ainsi à un plus grand nombre de jeunes de vivre cette aventure extraordinaire.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-      <section class="testimonials" id="media">
+    </section>
+    
+    <section class="testimonials" id="historique">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Historique et Impact</h1>
+                    <div class="timeline">
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>1997</h2>
+                                <p><strong>Création</strong> du 4L Trophy par Jean-Jacques Rey en s’inspirant du Dakar.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <h2>2001</h2>
+                                <p><strong>Démocratisation</strong> du 4L Trophy grâce à l’École supérieure de commerce de Rennes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>2008</h2>
+                                <p><strong>1000 véhicules</strong> partent de Biarritz pour la première fois.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <h2>2010</h2>
+                                <p>L’association des enfants du désert s’occupe des dons une fois dans le désert.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>2025</h2>
+                                <p><strong>Un des plus gros rallyes du monde</strong> se réitère pour une 28ème fois.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="features" id="objectifs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 features-leftcol wp2">
+                    <h1>Objectifs de Participation</h1>
+                    <p class="margin-bottom">Nos objectifs en participant au 4L Trophy sont de vivre une expérience unique, d'aider les enfants du désert marocain en leur fournissant des fournitures scolaires et sportives, et de sensibiliser à l'importance de l'éducation et de la solidarité internationale.</p>
+                </div>
+                <div class="col-md-6 features-rightcol wp3">
+                    <h1>Impact social et environnemental</h1>
+                    <p class="margin-bottom">Au-delà de l'aventure, le 4L Trophy a un impact profond sur les communautés visitées. À ce jour, des tonnes de fournitures ont été distribuées, améliorant l'accès à l'éducation pour des milliers d'enfants. Les participants s'engagent également à respecter l'environnement en suivant des pratiques de conduite durable.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="#sponsoring" class="try-btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="design" id="sponsoring">
+      <div class="container">
           <div class="row">
-            <div class="col-md-12 text-center">
-              <div id="firstSlider">
-                <ul class="slides">
-                  <li>
-                    <div class="avatar"><img src="img/av-blaz.png" alt="Blaz Robar"></div>
-                    <h1>I couldnt possibly use my own eyes to look at the stars, thansk Starnught App.</h1>
-                  </li>
-                  <li>
-                    <div class="avatar"><img src="img/av-pete.png" alt="Pete Finlan"></div>
-                    <h1>Staring at the stars has given me feels like never before.</h1>
-                  </li>
-                  <li>
-                    <div class="avatar"><img src="img/av-doge.png" alt="Doge Finbar"></div>
-                    <h1>Much flat, many design, so app. Wow.</h1>
-                  </li>
-                </ul>
+              <div class="col-md-12">
+                  <h1>Besoins en Sponsoring</h1>
+                  <p>Pour réaliser cette aventure, nous avons besoin de soutien financier pour couvrir les frais suivants :</p>
+                  <ul>
+                      <li><strong>Voiture</strong> : 4000 € - Achat et préparation de la 4L.</li>
+                      <li><strong>Inscription</strong> : 3640 € - Frais d'inscription, bateau pour la traversée A-R, demi-pension pour le bivouac et hébergement à Marrakech, assistance technique et médicale.</li>
+                      <li><strong>Préparation</strong> : 1000 € - Réparation et amélioration de la 4L, achat de pièces de rechange, achat d'accessoires obligatoires.</li>
+                      <li><strong>Essence</strong> : 700 € - Carburant pour le trajet.</li>
+                      <li><strong>Péages</strong> : 150 € - Frais de péage pour les routes empruntées.</li>
+                      <li><strong>Réparation / Pièces</strong> : 500 € - Entretien et remplacement de pièces.</li>
+                      <li><strong>Assurance</strong> : 440 € - Couverture d'assurance pour la voiture et les participants.</li>
+                      <li><strong>Communications</strong> : 500 € - Équipements de communication (GPS, radio).</li>
+                      <li><strong>Nourritures</strong> : 250 € - Alimentation pour toute la durée du rallye.</li>
+                      <li><strong>Divers équipement</strong> : 400 € - Matériel supplémentaire nécessaire pour le rallye.</li>
+                  </ul>
+                  <p>Un total de 11 580 € est nécessaire pour mener à bien notre projet.</p>
+                  <div id="expenses-chart"></div>
+                  <h2>Matériel Obligatoire</h2>
+                  <div class="row">
+                      <div class="col-md-4">
+                          <h3>Equipements obligatoires pour la voiture :</h3>
+                          <ul>
+                              <li><strong>1 extincteur de 2 kgs minimum</strong></li>
+                              <li><strong>Kit de signalisation (triangle, gilet fluo)</strong></li>
+                              <li><strong>2 roues de secours</strong></li>
+                              <li><strong>2 anneaux de prise de remorque</strong></li>
+                              <li><strong>1 jerrycan de 20L</strong></li>
+                              <li>Joints de culasse</li>
+                              <li><strong>2 ceintures de sécurité homologuées</strong></li>
+                              <li>Vis platinées</li>
+                              <li><strong>1 sangle de remorquage</strong></li>
+                              <li>Jeu de bougies neuves</li>
+                              <li><strong>2 manilles</strong></li>
+                              <li>Support de boîte</li>
+                              <li><strong>1 trousse à outils succincte</strong></li>
+                              <li>Silent bloc de nez de boîte</li>
+                              <li><strong>Autonomie carburant de 350 kms</strong></li>
+                              <li>Les quatre roulements de roue</li>
+                          </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <h3>Equipements de survie :</h3>
+                          <ul>
+                              <li><strong>1 boussole</strong></li>
+                              <li><strong>1 briquet</strong></li>
+                              <li><strong>1 carte générale du Maroc</strong></li>
+                              <li><strong>5 litres Réserve d'eau par personne au Maroc</strong></li>
+                              <li><strong>2 fusées de détresse</strong></li>
+                              <li><strong>2 couvertures de survie</strong></li>
+                              <li><strong>1 tente pour deux</strong></li>
+                              <li><strong>2 duvets</strong></li>
+                              <li><strong>1 lampe</strong></li>
+                              <li><strong>Lunettes de soleil</strong></li>
+                              <li><strong>Crème solaire</strong></li>
+                              <li><strong>1 téléphone GSM</strong></li>
+                          </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <h3>Equipements médicaux :</h3>
+                          <ul>
+                              <li><strong>1 collyre pour uvéite solaire</strong></li>
+                              <li><strong>1 boîte d'URIDOZ</strong></li>
+                              <li>Gouttes auriculaires pour otite</li>
+                              <li>1 anti-inflammatoire</li>
+                              <li>1 antibiotique pour infection ORL et pulmonaire</li>
+                              <li>1 flacon de Biseptine</li>
+                              <li>1 sirop type HELICIDINE</li>
+                              <li>Stéristrip</li>
+                              <li>1 boîte ARESTAL</li>
+                              <li>Pansements</li>
+                              <li>1 boîte MOTILYO</li>
+                              <li>1 bande élastoplast</li>
+                              <li>1 boîte SPASFON</li>
+                              <li>Biafine</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <p><strong>Note :</strong> Le don matériel de ces équipements est aussi le bienvenu.</p>
+                  <h3>Dons obligatoires :</h3>
+                  <ul>
+                      <li><strong>2 sacs de sport remplis de matériel de sport :</strong> Vêtements de sport, ballons de football, de basket, pompes, balles, cordes à sauter, frisbee...</li>
+                      <li><strong>2 cartables remplis de fournitures scolaires :</strong> crayons, crayons de papier, crayons de couleurs, stylos, gommes, taille-crayons, règles, matériel de géométrie, peinture, pinceaux et cahiers.</li>
+                      <li><strong>10 kg de denrées alimentaires non périssables :</strong> conserves (légumes, raviolis, thon, sardine), épicerie salée (pâte, riz, semoule, sauce, huile), épicerie sucrée (confiture, thé, café), petits pots pour bébé, produits d'hygiène (couche, gel douche, shampooing).</li>
+                  </ul>
+                  <h2>Comment Nous Aider</h2>
+                  <p>En tant que sponsor, vous pouvez nous aider de plusieurs manières :</p>
+                  <ul>
+                      <li><strong>Don financier :</strong> Vous pouvez faire un don directement pour couvrir une partie des frais.</li>
+                      <li><strong>Fournitures et équipements :</strong> Vous pouvez fournir des équipements, des pièces de rechange ou des fournitures pour le rallye.</li>
+                      <li><strong>Partenariat :</strong> Vous pouvez devenir un partenaire officiel et bénéficier de la visibilité lors de l'événement et sur nos supports de communication.</li>
+                  </ul>
+                  <p>En échange de votre soutien, nous offrons à nos sponsors :</p>
+                  <ul>
+                      <li><strong>Visibilité :</strong> Votre logo sur notre voiture, nos réseaux sociaux et notre site web.</li>
+                      <li><strong>Publicité :</strong> Mention de votre entreprise lors de nos communications et événements.</li>
+                      <li><strong>Engagement :</strong> Une opportunité de montrer votre engagement pour une cause noble et humanitaire.</li>
+                  </ul>
+                  <h2>Tarifs pour les Emplacements sur la Voiture</h2>
+                  <img src="img/voiture1.png" alt="Voiture avec emplacements sponsors" class="sponsor-image">
+                  <p>Voici les tarifs pour les différents emplacements sur la voiture :</p>
+                  <ul>
+                      <li><strong>Emplacement 1 :</strong> 1000 €</li>
+                      <li><strong>Emplacement 2 :</strong> 800 €</li>
+                      <li><strong>Emplacement 3 :</strong> 600 €</li>
+                      <li><strong>Emplacement 4 :</strong> 400 €</li>
+                      <li><strong>Emplacement 5 :</strong> 200 €</li>
+                  </ul>
               </div>
-            </div>
           </div>
-        </div>
-      </section>
-      <section class="features" id="features">
-        <div class="container">
+      </div>
+  </section>
+  
+
+  <section class="design" id="fiscalite">
+      <div class="container">
           <div class="row">
-            <div class="col-md-6 features-leftcol wp2">
-              <h1>So Dreamy</h1>
-              <p class="margin-bottom">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h1>Apple Store</h1>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-md-6 features-rightcol wp3">
-              <h1>More Buzz Words</h1>
-              <p class="margin-bottom">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h1>Extra Startup Juice</h1>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <a href="#" class="try-btn">Try Demo</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="design" id="design">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div id="secondSlider">
-                <ul class="slides">
-                  <li>
-                    <div class="col-md-4">
-                      <div class="flat-box">
-                        <div class="colourway colour1"></div>
-                        <p class="title">Extra Startup Juice</p>
-                        <p class="feature-text">Added Feature</p>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="flat-box">
-                        <div class="colourway colour2"></div>
-                        <p class="title">So Thirsty</p>
-                        <p class="feature-text">Extra nice UI comes with the app</p>
-                      </div>
-                    </div>
-                    <div class="col-md-4 design-content">
-                      <h1>So flat you'll want to give it some shadows</h1>
-                      <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="col-md-4">
-                      <div class="flat-box">
-                        <div class="colourway colour3"></div>
-                        <p class="title">Extra Startup Juice</p>
-                        <p class="feature-text">Added Feature</p>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="flat-box">
-                        <div class="colourway colour4"></div>
-                        <p class="title">So Thirsty</p>
-                        <p class="feature-text">Extra nice UI comes with the app</p>
-                      </div>
-                    </div>
-                    <div class="col-md-4 design-content">
-                      <h1>So flat you'll want to give it some shadows</h1>
-                      <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </li>
-                </ul>
+              <div class="col-md-12">
+                  <h1>Les Avantages Fiscaux des Dons</h1>
+                  <h2>Pour les Entreprises</h2>
+                  <p><strong>Les entreprises</strong> qui effectuent des dons à des associations reconnues d'intérêt général peuvent bénéficier d'une <strong>réduction d'impôt de 60%</strong> du montant du don, dans la limite de 0,5% du chiffre d'affaires HT.</p>
+                  <h2>Pour les Particuliers</h2>
+                  <p><strong>Les particuliers</strong> peuvent bénéficier d'une <strong>réduction d'impôt de 66%</strong> du montant des dons, dans la limite de 20% du revenu imposable.</p>
+                  <h2>Transparence et Traçabilité</h2>
+                  <p>Pour chaque don reçu, nous fournissons un <strong>reçu fiscal</strong> permettant aux donateurs de bénéficier des avantages fiscaux. Notre association s'engage à une <strong>gestion transparente des fonds reçus</strong>, assurant ainsi une utilisation optimale des dons pour les projets humanitaires du 4L Trophy.</p>
               </div>
-              <div class="col-md-1 col-md-offset-11 text-right controls">
-                <a href="prev" class="prev"><i class="fa fa-angle-left fa-3x"></i></a>
-                <a href="next" class="next"><i class="fa fa-angle-right fa-3x"></i></a>
+          </div>
+      </div>
+  </section>
+
+  <section class="features" id="copilotes">
+      <div class="container">
+          <h1 class="section-title">Les Intarissables</h1>
+          <div class="row">
+              <div class="col-md-6 features-leftcol wp2">
+                  <div class="avatar">
+                      <img src="img/portrait.jpg" alt="Alexis Treilles">
+                  </div>
+                  <p><strong>Alexis Treilles</strong></p>
+                  <p>22 ans, Etudiant en école d’ingénieur électronique, Bordeaux.</p>
               </div>
-            </div>
+              <div class="col-md-6 features-rightcol wp3">
+                  <div class="avatar">
+                      <img src="img/rob.png" alt="Robin Cambon">
+                  </div>
+                  <p><strong>Robin Cambon</strong></p>
+                  <p>22 ans, Webmarketer.</p>
+              </div>
           </div>
-        </div>
-      </section>
-      <footer>
-        <div class="container">
+      </div>
+  </section>
+  <section class="features" id="formation">
+      <div class="container">
+          <h1 class="section-title">Fondation Marie Louise</h1>
           <div class="row">
-            <div class="col-md-4">
-              <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
-            </div>
-            <div class="col-md-3">
-              <p>aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
-            </div>
-            <div class="col-md-2 col-md-offset-3">
-              <ul class="footer-nav">
-                <li><a href="#">Get Started Tutorial</a></li>
-                <li><a href="#">Introduction Video</a></li>
-                <li><a href="#">See the Features</a></li>
-                <li><a href="#">Download a Trial</a></li>
-                <li><a href="#">Get in Touch!</a></li>
-              </ul>
-            </div>
+              <div class="col-md-12">
+                  <img src="img/logo-marie-louise.png" alt="Logo Marie Louise" class="sponsor-image">
+                  <p>La Fondation Marie-Louise, fondée en 1989, est une organisation reconnue d'utilité publique qui se consacre à l'amélioration des conditions de vie des personnes en situation de handicap. Basée à Gratentour, en Occitanie, elle gère plusieurs établissements médico-sociaux, notamment des Maisons d'Accueil Spécialisées et des foyers de vie.</p>
+                  <p>La mission de la Fondation est d'offrir un cadre de vie digne et adapté aux besoins des résidents, tout en favorisant leur autonomie et leur intégration sociale. Pour cela, elle propose une gamme de services incluant des soins médicaux, des activités éducatives, sportives et culturelles, ainsi que des programmes de rééducation et de thérapie.</p>
+                  <p>Grâce à un engagement fort des bénévoles et du personnel soignant, la Fondation Marie-Louise s'efforce de créer un environnement chaleureux et stimulant pour les résidents. Elle collabore également avec des partenaires locaux et nationaux pour mener à bien ses projets et assurer la pérennité de ses actions.</p>
+                  <p>Pour soutenir la Fondation ou obtenir plus d'informations sur ses activités, vous pouvez visiter leur site web officiel à l'adresse suivante : <a href="http://www.fondation-marie-louise.org">www.fondation-marie-louise.org</a>.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+  <section class="features" id="enfants-du-desert">
+      <div class="container">
+          <h1 class="section-title">Association Les Enfants du Désert</h1>
+          <div class="row">
+              <div class="col-md-12">
+                  <p><strong>Les Enfants du Désert</strong> est une association française créée en 2005 par Laetitia Chevallier. Elle a pour mission principale d'améliorer l'accès à l'éducation des enfants vivant dans les régions désertiques du Maroc.</p>
+                  <p>L'association mène diverses actions pour atteindre cet objectif :</p>
+                  <ul>
+                      <li><strong>Construction d'écoles</strong> : Les Enfants du Désert financent et supervisent la construction de nouvelles écoles dans les zones rurales du désert marocain.</li>
+                      <li><strong>Fournitures scolaires</strong> : Distribution de kits scolaires aux enfants pour qu'ils puissent étudier dans de bonnes conditions.</li>
+                      <li><strong>Programmes de parrainage</strong> : Mise en place de programmes de parrainage pour permettre à des enfants de continuer leur scolarité.</li>
+                      <li><strong>Actions de santé</strong> : Organisation de campagnes de sensibilisation et de prévention pour améliorer la santé des enfants et de leurs familles.</li>
+                  </ul>
+                  <p>Le partenariat avec le <strong>4L Trophy</strong> est une composante clé de l'engagement de l'association. Chaque année, les équipages du 4L Trophy acheminent plusieurs tonnes de fournitures scolaires et sportives à destination des écoles soutenues par Les Enfants du Désert. Ce partenariat permet de mobiliser une aide logistique précieuse et de sensibiliser les participants et le public aux enjeux de l'éducation dans ces régions isolées.</p>
+                  <p>Pour plus d'informations sur les actions de l'association et pour découvrir comment vous pouvez contribuer, vous pouvez visiter leur site internet officiel : <a href="https://www.enfantsdudesert.org/" target="_blank">www.enfantsdudesert.org</a>.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="testimonials" id="partenaires">
+      <div class="container">
+          <h1 class="section-title">Partenaires officiels du 4L Trophy</h1>
+          <div class="row">
+              <div class="col-md-12">
+                  <div id="partnersSlider">
+                      <ul class="slides">
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/4.webp" alt="Les Enfants du Désert" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://www.enfantsdudesert.org/" target="_blank">Les Enfants du Désert</a></strong> : Association française créée en 2005, elle vise à améliorer l'accès à l'éducation pour les enfants du désert marocain.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/2.webp" alt="NRJ" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong><a href="https://www.nrj.fr/" target="_blank">NRJ</a></strong> : La première radio musicale de France, apportant une couverture médiatique importante à l'événement.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/1.webp" alt="RMC Découverte" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://rmcdecouverte.bfmtv.com/" target="_blank">RMC Découverte</a></strong> : Chaîne de télévision française dédiée aux documentaires, diffusant des programmes sur le 4L Trophy.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/3.webp" alt="Studyrama" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong><a href="https://www.studyrama.com/" target="_blank">Studyrama</a></strong> : Acteur majeur de l'orientation et de la formation en France, accompagnant les jeunes tout au long de leur parcours académique et professionnel.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/5.webp" alt="Surfrider Foundation Maroc" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://surfriderfoundation.org/" target="_blank">Surfrider Foundation Maroc</a></strong> : Association œuvrant pour la protection et la gestion durable du littoral marocain.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/6.webp" alt="Cap Eco Solidaire" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong><a href="https://www.cap-eco-solidaire.org/" target="_blank">Cap Eco Solidaire</a></strong> : Organisation soutenant des projets écologiques et citoyens, notamment pour la conservation des ressources hydriques.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/7.webp" alt="4L Solidaire" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://4ltrophy.com/4l-solidaire" target="_blank">4L Solidaire</a></strong> : Initiative en partenariat avec la Croix-Rouge française, collectant des denrées alimentaires pour les personnes défavorisées.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/8.webp" alt="ELC" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong><a href="https://www.elc.fr/" target="_blank">ELC</a></strong> : Fabricant français de matériel d'éclairage professionnel, fournissant des solutions innovantes pour le 4L Trophy.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/9.webp" alt="Croix-Rouge française" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://www.croix-rouge.fr/" target="_blank">Croix-Rouge française</a></strong> : Organisation humanitaire participant à la collecte de dons alimentaires pour les familles nécessiteuses.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/10.webp" alt="Rennes School of Business" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong><a href="https://www.rennes-sb.com/" target="_blank">Rennes School of Business</a></strong> : Grande école de management soutenant l'organisation du 4L Trophy à travers son association étudiante.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/11.webp" alt="Ville de Biarritz et Destination Biarritz" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://www.biarritz.fr/" target="_blank">Ville de Biarritz et Destination Biarritz</a></strong> : Accueillant le départ du 4L Trophy et offrant un cadre exceptionnel aux participants.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/12.webp" alt="Royaume du Maroc" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong>Royaume du Maroc</strong> : Soutien officiel du Raid 4L Trophy.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center;">
+                                  <img src="img/13.webp" alt="Fédération Royale Marocaine des Sports Automobiles" style="width: 150px; height: 150px; margin-right: 20px;">
+                                  <h2><strong><a href="https://www.frmsa.ma/" target="_blank">Fédération Royale Marocaine des Sports Automobiles</a></strong> : Accueillant le raid dans le désert marocain.</h3>
+                              </div>
+                          </li>
+                          <li class="partner-item">
+                              <div class="container" style="display: flex; align-items: center; flex-direction: row-reverse;">
+                                  <img src="img/14.webp" alt="Ministère du Tourisme marocain" style="width: 150px; height: 150px; margin-left: 20px;">
+                                  <h2><strong>Ministère du Tourisme marocain</strong> : Promouvant le tourisme à travers le 4L Trophy.</h3>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="features" id="notre-voiture">
+      <div class="container">
+          <h1 class="section-title">Notre Voiture - La 4L des Intarissables</h1>
+          <div class="row">
+              <div class="col-md-6 features-leftcol wp2">
+                  <h2>Présentation Générale</h2>
+                  <p>Notre voiture est une Renault 4L, modèle ??????, fabriquée en ??????. Elle arbore une couleur ?????? et se distingue par ??????. Notre équipage, nommé "??????", est fier de conduire cette voiture emblématique.</p>
+                  <img src="img/voiture_avant_modif.jpg" alt="Voiture avant modification" class="sponsor-image">
+              </div>
+              <div class="col-md-6 features-rightcol wp3">
+                  <h2>Historique de la Voiture</h2>
+                  <p>Nous avons acquis cette 4L en ??????, grâce à ??????. Une anecdote intéressante à propos de cette voiture est ??????. Depuis son acquisition, elle est devenue un membre à part entière de notre équipe.</p>
+                  <img src="img/voiture_historique.jpg" alt="Historique de la voiture" class="sponsor-image">
+              </div>
           </div>
           <div class="row">
+              <div class="col-md-6 features-leftcol wp2">
+                  <h2>Préparations et Modifications</h2>
+                  <p>Pour préparer notre 4L au 4L Trophy, nous avons effectué plusieurs modifications et améliorations, notamment ??????, ?????? et ??????. Ces modifications ont été possibles grâce au soutien de nos sponsors, notamment ?????? et ??????.</p>
+                  <img src="img/voiture_modif.jpg" alt="Voiture après modification" class="sponsor-image">
+              </div>
+              <div class="col-md-6 features-rightcol wp3">
+                  <h2>Objectifs pour le 4L Trophy</h2>
+                  <p>Avec cette voiture, nous espérons atteindre plusieurs objectifs lors du 4L Trophy. Elle nous permettra de ??????, ?????? et ??????. De plus, notre 4L jouera un rôle crucial dans nos actions humanitaires en transportant des fournitures scolaires et autres matériels nécessaires.</p>
+                  <img src="img/voiture_en_action.jpg" alt="Voiture en action" class="sponsor-image">
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="features" id="sponsors">
+      <div class="container">
+          <h1 class="section-title">Nos Sponsors</h1>
+          <div class="row">
+              <div class="col-md-12">
+                    <p>Soyez les premiers à soutenir Les Intarissables. Rejoignez-nous dans cette aventure humanitaire unique en devenant sponsor de notre équipe et en contribuant à une cause noble. Votre soutien est essentiel pour nous aider à atteindre nos objectifs et faire une différence positive.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="design" id="contact">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1>Contact et Informations Complémentaires</h1>
+                  <p>Pour nous contacter :</p>
+                  <form action="https://formspree.io/f/mblrjprd" method="POST">
+                      <div class="form-group">
+                          <label for="name">Nom</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Envoyer</button>
+                  </form>
+                  <ul>
+                      <li>Email : <a href="mailto:lesintarissables@gmail.com">lesintarissables@gmail.com</a></li>
+                      <li>Téléphone : 07 87 22 12 34</li>
+                      <li>Site Web : <a href="https://4ltrophy.alexis-treilles.fr/">https://4ltrophy.alexis-treilles.fr/</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+  <footer>
+    <div class="container">
+        <div class="row">
             <div class="col-md-12 text-center">
-              <a href="#" class="badge-btn">Badge Button</a>
-              <p class="footer-credit">Design by <a href="http://www.blazrobar.com">Blaz Robar</a></p>
+                <p class="footer-credit">"Starnight" One Page Website Template by <a href="http://peterfinlan.com/" target="_blank">Peter Finlan</a>. <a href="https://dribbble.com/shots/1592140-Freebie-Starnight-HTML5-CSS3-Website-Template" target="_blank">Download</a> | <a href="https://dribbble.com/shots/1592140-Freebie-Starnight-HTML5-CSS3-Website-Template" target="_blank">Demo</a></p>
             </div>
-          </div>
         </div>
-      </footer>
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script src="js/jquery.fancybox.pack.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/scripts.js?v=1.7"></script>
-      <script src="js/jquery.flexslider.js"></script>
-      <script src="js/jquery.smooth-scroll.js"></script>
-      <script src="js/modernizr.js"></script>
-      <script src="js/waypoints.min.js"></script>
-    </body>
-  </html>
+    </div>
+</footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js?v=1.7"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/jquery.smooth-scroll.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var options = { 
+              chart: {
+                  type: 'pie',
+                  height: 400
+              },
+              series: [4000, 3640, 1000, 700, 150, 500, 440, 500, 250, 400],
+              labels: ['Voiture', 'Inscription', 'Préparation', 'Essence', 'Péages', 'Réparation / Pièces', 'Assurance', 'Communications', 'Nourritures', 'Divers équipement'],
+              responsive: [{
+                  breakpoint: 480,
+                  options: {
+                      chart: {
+                          width: 300
+                      },
+                      legend: {
+                          position: 'bottom'
+                      }
+                  }
+              }]
+          };
+          var chart = new ApexCharts(document.querySelector("#expenses-chart"), options);
+          chart.render();
+      });
+  </script>
+</body>
+</html>
