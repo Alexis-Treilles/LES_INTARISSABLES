@@ -17,12 +17,23 @@
      <!-- Favicon -->
      <link rel="icon" href="img/logo.webp" type="image/x-icon">
      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+     
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        #3d-car {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+    
     <style>
         .timeline {
             position: relative;
@@ -143,6 +154,13 @@
             display: block;
         }
     </style>
+    <style>
+        .large-list li {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #ffffff;
+        }
+        </style>
 </head>
 <body>
     <section class="navigation">
@@ -177,7 +195,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <h1 class="animated bounceInDown">Les Intarissables</h1>
+                    <img src="/img/1/webp" alt="Les Intarissables" style="width: 60%;">
                     <p class="animated fadeInUpDelay">Bienvenue sur le site de notre association participant au 4L Trophy, une aventure humanitaire unique qui combine aventure et solidarité.</p>
                 </div>
             </div>
@@ -188,6 +206,7 @@
             </div>
         </div>
     </section>
+    
     <section class="download-now" id="introduction">
         <div class="container">
             <div class="row">
@@ -196,7 +215,7 @@
                     <p><strong>Le 4L Trophy</strong> est un rallye humanitaire unique, créé en 1997 par Jean-Jacques Rey, s'inspirant du célèbre Dakar. Chaque année, des jeunes de toute l'Europe se lancent dans un périple à travers la France, l'Espagne et les paysages époustouflants du Maroc à bord de la légendaire Renault 4L. Cette épreuve teste leur endurance, leur ingéniosité et leur esprit d'équipe tout en contribuant à des causes humanitaires.</p>
                     <p><strong>Objectif principal :</strong> Offrir une expérience inoubliable aux jeunes aventuriers tout en apportant une aide concrète aux enfants les plus démunis du Maroc. Les équipages livrent des fournitures scolaires et sportives directement aux écoles isolées du désert marocain.</p>
                     <p><strong>Quelques chiffres clés :</strong></p>
-                    <ul>
+                    <ul class="large-list">
                         <li>Plus de 1 200 équipages participent chaque année, représentant plus de 2 400 participants.</li>
                         <li>Plus de 60 tonnes de fournitures scolaires et sportives collectées et distribuées.</li>
                         <li>Une distance totale parcourue de plus de 6 000 kilomètres.</li>
@@ -248,18 +267,29 @@
             </div>
         </div>
     </section>
-
-    
     <section class="features" id="objectifs">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 features-leftcol wp2">
-                    <h1>Objectifs de Participation</h1>
-                    <p class="margin-bottom">Nos objectifs en participant au 4L Trophy sont de vivre une expérience unique, d'aider les enfants du désert marocain en leur fournissant des fournitures scolaires et sportives, et de sensibiliser à l'importance de l'éducation et de la solidarité internationale.</p>
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Nos Objectifs et Impact</h1>
+                    
                 </div>
-                <div class="col-md-6 features-rightcol wp3">
-                    <h1>Impact social et environnemental</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 features-leftcol wp2 feature-box">
+                    <h2>Objectifs de Participation</h2>
+                    <p class="margin-bottom">Nos objectifs en participant au 4L Trophy sont de vivre une expérience unique, d'aider les enfants du désert marocain en leur fournissant des fournitures scolaires et sportives, et de sensibiliser à l'importance de l'éducation et de la solidarité internationale.</p>
+                    <div class="bottom-content">
+                        <img src="chemin/vers/votre_image1.png" alt="Image 1" class="bottom-image">
+                    </div>
+                </div>
+                <div class="col-md-6 features-rightcol wp3 feature-box">
+                    <h2>Impact social et environnemental</h2>
                     <p class="margin-bottom">Au-delà de l'aventure, le 4L Trophy a un impact profond sur les communautés visitées. À ce jour, des tonnes de fournitures ont été distribuées, améliorant l'accès à l'éducation pour des milliers d'enfants. Les participants s'engagent également à respecter l'environnement en suivant des pratiques de conduite durable.</p>
+                    <div class="bottom-content">
+                        
+                        <img src="chemin/vers/votre_image2.png" alt="Image 2" class="bottom-image">
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -269,121 +299,168 @@
             </div>
         </div>
     </section>
+    
+    <style>
+    .features {
+        padding: 50px 0;
+    }
+    
+    .section-main-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    
+    .feature-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+    }
+    
+    .features .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .features .features-leftcol, .features .features-rightcol {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bottom-content {
+        text-align: center;
+        margin-top: auto;
+    }
+    
+    .bottom-image {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    </style>
+    
+    
     <section class="design" id="sponsoring">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <h1>Besoins en Sponsoring</h1>
-                  <p>Pour réaliser cette aventure, nous avons besoin de soutien financier pour couvrir les frais suivants :</p>
-                  <ul>
-                      <li><strong>Voiture</strong> : 4000 € - Achat et préparation de la 4L.</li>
-                      <li><strong>Inscription</strong> : 3640 € - Frais d'inscription, bateau pour la traversée A-R, demi-pension pour le bivouac et hébergement à Marrakech, assistance technique et médicale.</li>
-                      <li><strong>Préparation</strong> : 1000 € - Réparation et amélioration de la 4L, achat de pièces de rechange, achat d'accessoires obligatoires.</li>
-                      <li><strong>Essence</strong> : 700 € - Carburant pour le trajet.</li>
-                      <li><strong>Péages</strong> : 150 € - Frais de péage pour les routes empruntées.</li>
-                      <li><strong>Réparation / Pièces</strong> : 500 € - Entretien et remplacement de pièces.</li>
-                      <li><strong>Assurance</strong> : 440 € - Couverture d'assurance pour la voiture et les participants.</li>
-                      <li><strong>Communications</strong> : 500 € - Équipements de communication (GPS, radio).</li>
-                      <li><strong>Nourritures</strong> : 250 € - Alimentation pour toute la durée du rallye.</li>
-                      <li><strong>Divers équipement</strong> : 400 € - Matériel supplémentaire nécessaire pour le rallye.</li>
-                  </ul>
-                  <p>Un total de 11 580 € est nécessaire pour mener à bien notre projet.</p>
-                  <div id="expenses-chart"></div>
-                  <h2>Matériel Obligatoire</h2>
-                  <div class="row">
-                      <div class="col-md-4">
-                          <h3>Equipements obligatoires pour la voiture :</h3>
-                          <ul>
-                              <li><strong>1 extincteur de 2 kgs minimum</strong></li>
-                              <li><strong>Kit de signalisation (triangle, gilet fluo)</strong></li>
-                              <li><strong>2 roues de secours</strong></li>
-                              <li><strong>2 anneaux de prise de remorque</strong></li>
-                              <li><strong>1 jerrycan de 20L</strong></li>
-                              <li>Joints de culasse</li>
-                              <li><strong>2 ceintures de sécurité homologuées</strong></li>
-                              <li>Vis platinées</li>
-                              <li><strong>1 sangle de remorquage</strong></li>
-                              <li>Jeu de bougies neuves</li>
-                              <li><strong>2 manilles</strong></li>
-                              <li>Support de boîte</li>
-                              <li><strong>1 trousse à outils succincte</strong></li>
-                              <li>Silent bloc de nez de boîte</li>
-                              <li><strong>Autonomie carburant de 350 kms</strong></li>
-                              <li>Les quatre roulements de roue</li>
-                          </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <h3>Equipements de survie :</h3>
-                          <ul>
-                              <li><strong>1 boussole</strong></li>
-                              <li><strong>1 briquet</strong></li>
-                              <li><strong>1 carte générale du Maroc</strong></li>
-                              <li><strong>5 litres Réserve d'eau par personne au Maroc</strong></li>
-                              <li><strong>2 fusées de détresse</strong></li>
-                              <li><strong>2 couvertures de survie</strong></li>
-                              <li><strong>1 tente pour deux</strong></li>
-                              <li><strong>2 duvets</strong></li>
-                              <li><strong>1 lampe</strong></li>
-                              <li><strong>Lunettes de soleil</strong></li>
-                              <li><strong>Crème solaire</strong></li>
-                              <li><strong>1 téléphone GSM</strong></li>
-                          </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <h3>Equipements médicaux :</h3>
-                          <ul>
-                              <li><strong>1 collyre pour uvéite solaire</strong></li>
-                              <li><strong>1 boîte d'URIDOZ</strong></li>
-                              <li>Gouttes auriculaires pour otite</li>
-                              <li>1 anti-inflammatoire</li>
-                              <li>1 antibiotique pour infection ORL et pulmonaire</li>
-                              <li>1 flacon de Biseptine</li>
-                              <li>1 sirop type HELICIDINE</li>
-                              <li>Stéristrip</li>
-                              <li>1 boîte ARESTAL</li>
-                              <li>Pansements</li>
-                              <li>1 boîte MOTILYO</li>
-                              <li>1 bande élastoplast</li>
-                              <li>1 boîte SPASFON</li>
-                              <li>Biafine</li>
-                          </ul>
-                      </div>
-                  </div>
-                  <p><strong>Note :</strong> Le don matériel de ces équipements est aussi le bienvenu.</p>
-                  <h3>Dons obligatoires :</h3>
-                  <ul>
-                      <li><strong>2 sacs de sport remplis de matériel de sport :</strong> Vêtements de sport, ballons de football, de basket, pompes, balles, cordes à sauter, frisbee...</li>
-                      <li><strong>2 cartables remplis de fournitures scolaires :</strong> crayons, crayons de papier, crayons de couleurs, stylos, gommes, taille-crayons, règles, matériel de géométrie, peinture, pinceaux et cahiers.</li>
-                      <li><strong>10 kg de denrées alimentaires non périssables :</strong> conserves (légumes, raviolis, thon, sardine), épicerie salée (pâte, riz, semoule, sauce, huile), épicerie sucrée (confiture, thé, café), petits pots pour bébé, produits d'hygiène (couche, gel douche, shampooing).</li>
-                  </ul>
-                  <h2>Comment Nous Aider</h2>
-                  <p>En tant que sponsor, vous pouvez nous aider de plusieurs manières :</p>
-                  <ul>
-                      <li><strong>Don financier :</strong> Vous pouvez faire un don directement pour couvrir une partie des frais.</li>
-                      <li><strong>Fournitures et équipements :</strong> Vous pouvez fournir des équipements, des pièces de rechange ou des fournitures pour le rallye.</li>
-                      <li><strong>Partenariat :</strong> Vous pouvez devenir un partenaire officiel et bénéficier de la visibilité lors de l'événement et sur nos supports de communication.</li>
-                  </ul>
-                  <p>En échange de votre soutien, nous offrons à nos sponsors :</p>
-                  <ul>
-                      <li><strong>Visibilité :</strong> Votre logo sur notre voiture, nos réseaux sociaux et notre site web.</li>
-                      <li><strong>Publicité :</strong> Mention de votre entreprise lors de nos communications et événements.</li>
-                      <li><strong>Engagement :</strong> Une opportunité de montrer votre engagement pour une cause noble et humanitaire.</li>
-                  </ul>
-                  <h2>Tarifs pour les Emplacements sur la Voiture</h2>
-                  <img src="img/voiture1.png" alt="Voiture avec emplacements sponsors" class="sponsor-image">
-                  <p>Voici les tarifs pour les différents emplacements sur la voiture :</p>
-                  <ul>
-                      <li><strong>Emplacement 1 :</strong> 1000 €</li>
-                      <li><strong>Emplacement 2 :</strong> 800 €</li>
-                      <li><strong>Emplacement 3 :</strong> 600 €</li>
-                      <li><strong>Emplacement 4 :</strong> 400 €</li>
-                      <li><strong>Emplacement 5 :</strong> 200 €</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </section>
-  
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Besoins en Sponsoring</h1>
+                    <p>Pour réaliser cette aventure, nous avons besoin de soutien financier pour couvrir les frais suivants :</p>
+                    <ul>
+                        <li><strong>Voiture</strong> : 4000 € - Achat et préparation de la 4L.</li>
+                        <li><strong>Inscription</strong> : 3640 € - Frais d'inscription, bateau pour la traversée A-R, demi-pension pour le bivouac et hébergement à Marrakech, assistance technique et médicale.</li>
+                        <li><strong>Préparation</strong> : 1000 € - Réparation et amélioration de la 4L, achat de pièces de rechange, achat d'accessoires obligatoires.</li>
+                        <li><strong>Essence</strong> : 700 € - Carburant pour le trajet.</li>
+                        <li><strong>Péages</strong> : 150 € - Frais de péage pour les routes empruntées.</li>
+                        <li><strong>Réparation / Pièces</strong> : 500 € - Entretien et remplacement de pièces.</li>
+                        <li><strong>Assurance</strong> : 440 € - Couverture d'assurance pour la voiture et les participants.</li>
+                        <li><strong>Communications</strong> : 500 € - Équipements de communication (GPS, radio).</li>
+                        <li><strong>Nourritures</strong> : 250 € - Alimentation pour toute la durée du rallye.</li>
+                        <li><strong>Divers équipement</strong> : 400 € - Matériel supplémentaire nécessaire pour le rallye.</li>
+                    </ul>
+                    <p>Un total de 11 580 € est nécessaire pour mener à bien notre projet.</p>
+                    <div id="expenses-chart"></div>
+                    <h2>Matériel Obligatoire</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>Equipements obligatoires pour la voiture :</h3>
+                            <ul>
+                                <li><strong>1 extincteur de 2 kgs minimum</strong></li>
+                                <li><strong>Kit de signalisation (triangle, gilet fluo)</strong></li>
+                                <li><strong>2 roues de secours</strong></li>
+                                <li><strong>2 anneaux de prise de remorque</strong></li>
+                                <li><strong>1 jerrycan de 20L</strong></li>
+                                <li>Joints de culasse</li>
+                                <li><strong>2 ceintures de sécurité homologuées</strong></li>
+                                <li>Vis platinées</li>
+                                <li><strong>1 sangle de remorquage</strong></li>
+                                <li>Jeu de bougies neuves</li>
+                                <li><strong>2 manilles</strong></li>
+                                <li>Support de boîte</li>
+                                <li><strong>1 trousse à outils succincte</strong></li>
+                                <li>Silent bloc de nez de boîte</li>
+                                <li><strong>Autonomie carburant de 350 kms</strong></li>
+                                <li>Les quatre roulements de roue</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Equipements de survie :</h3>
+                            <ul>
+                                <li><strong>1 boussole</strong></li>
+                                <li><strong>1 briquet</strong></li>
+                                <li><strong>1 carte générale du Maroc</strong></li>
+                                <li><strong>5 litres Réserve d'eau par personne au Maroc</strong></li>
+                                <li><strong>2 fusées de détresse</strong></li>
+                                <li><strong>2 couvertures de survie</strong></li>
+                                <li><strong>1 tente pour deux</strong></li>
+                                <li><strong>2 duvets</strong></li>
+                                <li><strong>1 lampe</strong></li>
+                                <li><strong>Lunettes de soleil</strong></li>
+                                <li><strong>Crème solaire</strong></li>
+                                <li><strong>1 téléphone GSM</strong></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Equipements médicaux :</h3>
+                            <ul>
+                                <li><strong>1 collyre pour uvéite solaire</strong></li>
+                                <li><strong>1 boîte d'URIDOZ</strong></li>
+                                <li>Gouttes auriculaires pour otite</li>
+                                <li>1 anti-inflammatoire</li>
+                                <li>1 antibiotique pour infection ORL et pulmonaire</li>
+                                <li>1 flacon de Biseptine</li>
+                                <li>1 sirop type HELICIDINE</li>
+                                <li>Stéristrip</li>
+                                <li>1 boîte ARESTAL</li>
+                                <li>Pansements</li>
+                                <li>1 boîte MOTILYO</li>
+                                <li>1 bande élastoplast</li>
+                                <li>1 boîte SPASFON</li>
+                                <li>Biafine</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p><strong>Note :</strong> Le don matériel de ces équipements est aussi le bienvenu.</p>
+                    <h3>Dons obligatoires :</h3>
+                    <ul>
+                        <li><strong>2 sacs de sport remplis de matériel de sport :</strong> Vêtements de sport, ballons de football, de basket, pompes, balles, cordes à sauter, frisbee...</li>
+                        <li><strong>2 cartables remplis de fournitures scolaires :</strong> crayons, crayons de papier, crayons de couleurs, stylos, gommes, taille-crayons, règles, matériel de géométrie, peinture, pinceaux et cahiers.</li>
+                        <li><strong>10 kg de denrées alimentaires non périssables :</strong> conserves (légumes, raviolis, thon, sardine), épicerie salée (pâte, riz, semoule, sauce, huile), épicerie sucrée (confiture, thé, café), petits pots pour bébé, produits d'hygiène (couche, gel douche, shampooing).</li>
+                    </ul>
+                    <h2>Comment Nous Aider</h2>
+                    <p>En tant que sponsor, vous pouvez nous aider de plusieurs manières :</p>
+                    <ul>
+                        <li><strong>Don financier :</strong> Vous pouvez faire un don directement pour couvrir une partie des frais.</li>
+                        <li><strong>Fournitures et équipements :</strong> Vous pouvez fournir des équipements, des pièces de rechange ou des fournitures pour le rallye.</li>
+                        <li><strong>Partenariat :</strong> Vous pouvez devenir un partenaire officiel et bénéficier de la visibilité lors de l'événement et sur nos supports de communication.</li>
+                    </ul>
+                    <p>En échange de votre soutien, nous offrons à nos sponsors :</p>
+                    <ul>
+                        <li><strong>Visibilité :</strong> Votre logo sur notre voiture, nos réseaux sociaux et notre site web.</li>
+                        <li><strong>Publicité :</strong> Mention de votre entreprise lors de nos communications et événements.</li>
+                        <li><strong>Engagement :</strong> Une opportunité de montrer votre engagement pour une cause noble et humanitaire.</li>
+                    </ul>
+                    <h2>Tarifs pour les Emplacements sur la Voiture</h2>
+                    <div id="3d-car">
+                        <img src="img/voiture (1).jpg" alt="Emplacements sur la voiture" style="width: 100%; max-width: 600px; margin: 0 auto; display: block;">
+                    </div>
+                    <p>Voici les tarifs pour les différents emplacements sur la voiture :</p>
+                    <ul>
+                        <li><strong>Emplacement 1 :</strong> 1000 €</li>
+                        <li><strong>Emplacement 2 :</strong> 800 €</li>
+                        <li><strong>Emplacement 3 :</strong> 600 €</li>
+                        <li><strong>Emplacement 4 :</strong> 400 €</li>
+                        <li><strong>Emplacement 5 :</strong> 200 €</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
   <section class="design" id="fiscalite">
       <div class="container">
@@ -423,19 +500,20 @@
       </div>
   </section>
   <section class="features" id="formation">
-      <div class="container">
-          <h1 class="section-title">Fondation Marie Louise</h1>
-          <div class="row">
-              <div class="col-md-12">
-                  <img src="img/logo-marie-louise.png" alt="Logo Marie Louise" class="sponsor-image">
-                  <p>La Fondation Marie-Louise, fondée en 1989, est une organisation reconnue d'utilité publique qui se consacre à l'amélioration des conditions de vie des personnes en situation de handicap. Basée à Gratentour, en Occitanie, elle gère plusieurs établissements médico-sociaux, notamment des Maisons d'Accueil Spécialisées et des foyers de vie.</p>
-                  <p>La mission de la Fondation est d'offrir un cadre de vie digne et adapté aux besoins des résidents, tout en favorisant leur autonomie et leur intégration sociale. Pour cela, elle propose une gamme de services incluant des soins médicaux, des activités éducatives, sportives et culturelles, ainsi que des programmes de rééducation et de thérapie.</p>
-                  <p>Grâce à un engagement fort des bénévoles et du personnel soignant, la Fondation Marie-Louise s'efforce de créer un environnement chaleureux et stimulant pour les résidents. Elle collabore également avec des partenaires locaux et nationaux pour mener à bien ses projets et assurer la pérennité de ses actions.</p>
-                  <p>Pour soutenir la Fondation ou obtenir plus d'informations sur ses activités, vous pouvez visiter leur site web officiel à l'adresse suivante : <a href="http://www.fondation-marie-louise.org">www.fondation-marie-louise.org</a>.</p>
-              </div>
-          </div>
-      </div>
-  </section>
+    <div class="container">
+        <h1 class="section-title">Fondation Marie Louise</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="img/logo-marie-louise.png" alt="Logo Marie Louise" class="sponsor-image">
+                <p><strong>La Fondation Marie-Louise</strong>, fondée en 1989, est une organisation reconnue d'utilité publique qui se consacre à l'amélioration des conditions de vie des personnes en situation de handicap. Basée à Gratentour, en Occitanie, elle gère plusieurs établissements médico-sociaux, notamment des <strong>Maisons d'Accueil Spécialisées</strong> et des <strong>foyers de vie</strong>.</p>
+                <p>La mission de la Fondation est d'offrir un cadre de vie digne et adapté aux besoins des résidents, tout en favorisant leur autonomie et leur intégration sociale. Pour cela, elle propose une gamme de services incluant des soins médicaux, des activités éducatives, sportives et culturelles, ainsi que des programmes de rééducation et de thérapie.</p>
+                <p>Grâce à un engagement fort des <strong>bénévoles</strong> et du <strong>personnel soignant</strong>, la Fondation Marie-Louise s'efforce de créer un environnement chaleureux et stimulant pour les résidents. Elle collabore également avec des <strong>partenaires locaux et nationaux</strong> pour mener à bien ses projets et assurer la pérennité de ses actions.</p>
+                <p>Pour soutenir la Fondation ou obtenir plus d'informations sur ses activités, vous pouvez visiter leur site web officiel à l'adresse suivante : <a href="http://www.fondation-marie-louise.org"><strong>www.fondation-marie-louise.org</strong></a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
   
   <section class="features" id="enfants-du-desert">
@@ -673,5 +751,27 @@
           chart.render();
       });
   </script>
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('3d-car').appendChild(renderer.domElement);
+
+    const objLoader = new THREE.OBJLoader();
+    objLoader.load('path/to/your/voiture.obj', (object) => {
+        scene.add(object);
+    });
+
+    camera.position.z = 5;
+
+    const animate = () => {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+    };
+    animate();
+</script>
+
+
 </body>
 </html>
