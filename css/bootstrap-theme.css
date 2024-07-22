@@ -53,6 +53,9 @@
   background-color: #e0e0e0;
   border-color: #dbdbdb;
 }
+.justify-text {
+  text-align: justify;
+}
 .btn-primary {
   background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
   background-image:         linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
