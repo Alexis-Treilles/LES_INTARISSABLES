@@ -322,7 +322,209 @@
             min-width: 200px; /* Ensuring minimum width */
         }
     </style>
+    <section class="testimonials" id="historique">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">Historique</h1>
+                    <div class="timeline">
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>1997</h2>
+                                <p><strong>Création</strong> du 4L Trophy par Jean-Jacques Rey en s’inspirant du Dakar.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <h2>2001</h2>
+                                <p><strong>Démocratisation</strong> du 4L Trophy grâce à l’École supérieure de commerce de Rennes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>2008</h2>
+                                <p><strong>1000 véhicules</strong> partent de Biarritz pour la première fois.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <h2>2010</h2>
+                                <p>L’association des enfants du désert s’occupe des dons une fois dans le désert.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-container timeline-left">
+                            <div class="timeline-content">
+                                <h2>2025</h2>
+                                <p><strong>Un des plus gros rallyes du monde</strong> se réitère pour une 28ème fois.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <style>
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+    
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+    
+        .timeline-container {
+            padding: 10px 20px;
+            position: relative;
+            width: 50%;
+        }
+    
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            right: -7.5px;
+            background-color: white;
+            border: 2px solid #428bca;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    
+        .timeline-left {
+            left: 0;
+        }
+    
+        .timeline-left::after {
+            left: -7.5px;
+        }
+    
+        .timeline-right {
+            left: 50%;
+        }
+    
+        .timeline-right::after {
+            left: auto;
+            right: -7.5px;
+        }
+    
+        .timeline-content {
+            padding: 10px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .timeline-left .timeline-content {
+            margin-right: 30px;
+        }
+    
+        .timeline-right .timeline-content {
+            margin-left: 30px;
+        }
+    
+        .timeline-content h2 {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    
+        .timeline-content p {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+    
+        @media (max-width: 1080px) {
+            .timeline-container {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 25px;
+                margin-bottom: 20px;
+            }
+    
+            .timeline-container::after {
+                left: 45px;
+            }
+    
+            .timeline-left,
+            .timeline-right {
+                left: 0;
+            }
+    
+            .timeline-left .timeline-content,
+            .timeline-right .timeline-content {
+                margin: 0;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 20px;
+            }
+    
+            .timeline-container {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 15px;
+                margin-bottom: 20px;
+            }
+    
+            .timeline-container::after {
+                left: 30px;
+            }
+    
+            .timeline-left,
+            .timeline-right {
+                left: 0;
+            }
+    
+            .timeline-left .timeline-content,
+            .timeline-right .timeline-content {
+                margin: 0;
+            }
+    
+            .timeline-content {
+                font-size: 0.8em;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.5em;
+            }
+    
+            .timeline-content h2 {
+                font-size: 1em;
+            }
+    
+            .timeline-content p {
+                font-size: 0.8em;
+            }
+    
+            .timeline-container {
+                padding-left: 20px;
+            }
+    
+            .timeline-container::after {
+                left: 15px;
+            }
+        }
+    </style>
     
     
     <section class="features" id="copilotes">
