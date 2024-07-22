@@ -22,66 +22,85 @@
     <style>
         #map_700c222d43c86059859fb392ad0f483e {
             position: relative;
-            width: 100.0%;
-            height: 100.0%;
-            left: 0.0%;
-            top: 0.0%;
+            width: 100%;
+            height: 600px;
         }
         .leaflet-container { font-size: 1rem; }
+        .custom-div-icon {
+            background-color: #007bff;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            #map_700c222d43c86059859fb392ad0f483e {
+                height: 400px;
+            }
+        }
+        @media (max-width: 480px) {
+            #map_700c222d43c86059859fb392ad0f483e {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="folium-map" id="map_700c222d43c86059859fb392ad0f483e" ></div>
-</body>
-<script>
-    var map_700c222d43c86059859fb392ad0f483e = L.map(
-        "map_700c222d43c86059859fb392ad0f483e",
-        {
-            center: [40.416775, -3.703790],
-            crs: L.CRS.EPSG3857,
-            zoom: 5,
-            zoomControl: true,
-            preferCanvas: false,
+    <div class="folium-map" id="map_700c222d43c86059859fb392ad0f483e"></div>
+
+    <script>
+        var map_700c222d43c86059859fb392ad0f483e = L.map(
+            "map_700c222d43c86059859fb392ad0f483e",
+            {
+                center: [40.416775, -3.703790],
+                crs: L.CRS.EPSG3857,
+                zoom: 5,
+                zoomControl: true,
+                preferCanvas: false,
+            }
+        );
+
+        var tile_layer_5a207756945bd57122db8de5d0f44a03 = L.tileLayer(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+        ).addTo(map_700c222d43c86059859fb392ad0f483e);
+
+        var points = [
+            [43.9528, 2.8885, "1. Départ à Saint-Affrique", "19 février 2025"],
+            [43.4831519, -1.558626, "2. Village Départ à Biarritz", "19-20 février 2025"],
+            [36.1408, -5.3536, "3. Liaison libre vers Algeciras", "21-22 février 2025"],
+            [35.7595, -5.833954, "4. Passage du détroit de Gibraltar en bateau", "22-23 février 2025"],
+            [34.020882, -6.84165, "5. Première étape au Maroc à Rabat", "24 février 2025"],
+            [32.881, -4.963, "6. Deuxième étape à Boulajoul", "25 février 2025"],
+            [31.0802, -4.0105, "7. Troisième étape à Merzouga", "26 février 2025"],
+            [31.9356, -4.4699, "8. Quatrième étape à Oued Ziz", "27 février 2025"],
+            [31.149, -4.005, "9. Cinquième étape à Erg Chebbi", "28 février 2025"],
+            [31.6295, -7.9811, "10. Arrivée et remise des prix à Marrakech", "1er mars 2025"]
+        ];
+
+        var latlngs = [];
+
+        for (var i = 0; i < points.length; i++) {
+            var point = points[i];
+            var marker = L.marker([point[0], point[1]]).addTo(map_700c222d43c86059859fb392ad0f483e);
+            latlngs.push([point[0], point[1]]);
+
+            var icon = L.divIcon({
+                className: 'custom-div-icon',
+                html: `<strong>${i + 1}</strong>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 24]
+            });
+            marker.setIcon(icon);
+
+            var popupContent = `<div style="width: 100%; height: 100%;"><strong>${point[2]}</strong><br>Date : ${point[3]}</div>`;
+            marker.bindPopup(popupContent);
         }
-    );
 
-    var tile_layer_5a207756945bd57122db8de5d0f44a03 = L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-        {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-    ).addTo(map_700c222d43c86059859fb392ad0f483e);
-
-    var points = [
-        [43.9528, 2.8885, "1. Départ à Saint-Affrique", "19 février 2025"],
-        [43.4831519, -1.558626, "2. Village Départ à Biarritz", "19-20 février 2025"],
-        [36.1408, -5.3536, "3. Liaison libre vers Algeciras", "21-22 février 2025"],
-        [35.7595, -5.833954, "4. Passage du détroit de Gibraltar en bateau", "22-23 février 2025"],
-        [34.020882, -6.84165, "5. Première étape au Maroc à Rabat", "24 février 2025"],
-        [32.881, -4.963, "6. Deuxième étape à Boulajoul", "25 février 2025"],
-        [31.0802, -4.0105, "7. Troisième étape à Merzouga", "26 février 2025"],
-        [31.9356, -4.4699, "8. Quatrième étape à Oued Ziz", "27 février 2025"],
-        [31.149, -4.005, "9. Cinquième étape à Erg Chebbi", "28 février 2025"],
-        [31.6295, -7.9811, "10. Arrivée et remise des prix à Marrakech", "1er mars 2025"]
-    ];
-
-    var latlngs = [];
-
-    for (var i = 0; i < points.length; i++) {
-        var point = points[i];
-        var marker = L.marker([point[0], point[1]]).addTo(map_700c222d43c86059859fb392ad0f483e);
-        latlngs.push([point[0], point[1]]);
-
-        var icon = L.divIcon({
-            className: 'custom-div-icon',
-            html: `<div style="background-color:#007bff; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><strong>${i + 1}</strong></div>`,
-            iconSize: [24, 24],
-            iconAnchor: [12, 24]
-        });
-        marker.setIcon(icon);
-
-        var popupContent = `<div style="width: 100.0%; height: 100.0%;"><strong>${point[2]}</strong><br>Date : ${point[3]}</div>`;
-        marker.bindPopup(popupContent);
-    }
-
-    var polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map_700c222d43c86059859fb392ad0f483e);
-</script>
+        var polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map_700c222d43c86059859fb392ad0f483e);
+    </script>
+</body>
 </html>
