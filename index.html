@@ -196,6 +196,7 @@
             border-radius: 5px;
         }
     </style>
+        
     <section class="hero" id="hero">
         <div class="container">
             <div class="row">
@@ -216,12 +217,63 @@
                         Your browser does not support the audio element.
                     </audio>
                     <br>
-                    <a href="music/Les_Intarisables.mp3" download class="get-started-btn">Télécharger la musique</a>
+                    <a href="music/Les_Intarisables.mp3" download class="get-started-btn custom-btn">Télécharger la musique</a>
                 </div>
             </div>
-            
+            <div class="row text-center" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <div class="button-container">
+                        <a class="btn custom-btn" href="#introduction">Introduction</a>
+                        <a class="btn custom-btn" href="#historique">Historique</a>
+                        <a class="btn custom-btn" href="#objectifs">Objectifs</a>
+                        <a class="btn custom-btn" href="#sponsors">Sponsor</a>
+                        <a class="btn custom-btn" href="#formation">Les Associations</a>
+                        <a class="btn custom-btn" href="#sponsoring">Rejoignez l'aventure</a>
+                        <a class="btn custom-btn" href="#partenaires">Visibilité Trophy</a>
+                        <a class="btn custom-btn" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    
+    <style>
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .custom-btn {
+        background-color: #2d6ca2;
+        color: #ffffff !important;
+        padding: 8px 10px; /* Augmenter légèrement la taille des boutons */
+        font-size: 14px; /* Augmenter légèrement la taille du texte */
+        border-radius: 3px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border: 1px solid #2b669a; /* Contour de couleur proche */
+    }
+    
+    .custom-btn:hover {
+        background-color: #2d6ca2;
+        color: #ffffff !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .highlightedtext {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        background-color: #2b669a; /* Couleur de fond bleue */
+        color: #ffffff; /* Couleur du texte blanche */
+        border-radius: 5px;
+        font-weight: bold; /* Écrire en gras */
+        font-size: 14px; /* Augmenter légèrement la taille du texte */
+    }
+    </style>
+    
     
     <section class="download-now" id="introduction">
         <div class="container">
